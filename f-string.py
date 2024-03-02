@@ -1,0 +1,4 @@
+"""
+string formatting
+.format function 
+"""
