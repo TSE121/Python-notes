@@ -17,7 +17,7 @@ class StudentInfo:
         - ITS SAME FOR THE WHOLE CLASS.
         - ITS DEFINED ONLY ONCE, FOR THE WHOLE CLASS.
 
-
+    #CLASSMETHODS AND STATIC-METHODS
     """
 
     class_name = "2024-B.Tech"    # Class Variable.
@@ -45,4 +45,29 @@ stud_1 = StudentInfo('Pipal ', 'Deka', 621, 7896602733, "pipal21.deka@gmail.com"
 # ways to call a method
 print(stud_1.display_name())  # calling directly from the instance
 print(StudentInfo.display_name(stud_1))  # calling the method from the class with passing the instance as an argument
+
+"""
+We can access CLASS VARIABLES via different methods. 
+We can use the CLASS, aswell as CLASS INSTANCES to call a CLASS VARIABLE outside the class. 
+
+    - StudentInfo.class_name --- accessing via CLASS 
+    - stud_1.class_name --- accessing via CLASS INSTANCES
+    
+We can also change the CLASS VARIABLE for each instances, as shown below. 
+        # print(stud_1.class_name)
+        # stud_1.class_name = "2024-B.tech CSE"
+        # print(stud_1.class_name)
+        Output: 
+            2024-B.Tech
+            2024-B.tech CSE
+
+"""
+print(StudentInfo.class_name)
+print(stud_1.class_name)
+stud_1.class_name = "2024-B.tech CSE"
+print(stud_1.class_name)
+# print(stud_1.__dict__)
+
 print(stud_1.display_info())
+
+
